@@ -1,0 +1,20 @@
+traditional data structures:
+we need to add the objects into that data structure
+
+
+glue based data structures:
+the reverse, we need to add the data structure into the objects
+example: we need to add the pointer for the next, prev for the object (employee, student)
+
+
+so if we following the first way, if we need to add the object to 3 LinkedLists
+so we need to add it three times
+
+but now, we will allocate it once
+and add into it 3 pointers to work with 3 different Data structures
+
+so here, we will use the same object
+
+and if we decided to remove it ,we can remove it by o(n) (using left, right pointers)
+from all data structures instead of 3n
+because in the traditional data structures, we need to loop through the data structure and remove it

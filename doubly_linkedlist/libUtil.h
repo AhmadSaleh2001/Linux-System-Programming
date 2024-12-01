@@ -1,0 +1,1 @@
+void change(LinkedList * l);

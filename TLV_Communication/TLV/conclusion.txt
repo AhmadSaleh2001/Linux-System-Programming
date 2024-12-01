@@ -1,0 +1,28 @@
+to fix issue of heterogeneity between the system
+lets assume we have system from provider A and another system from provider B
+if we need to send data from system A to system B
+
+
+typedef struct student_t {
+  int id;
+  char name[30];
+  int age;
+
+} student_t;
+
+its wrong to to do with recieved data on system B:
+
+void * data = getDataFromSystemA()
+student_t * s = (student_t*)data;
+
+because maybe we have the integer on system A is 4 Bytes
+but on system B is 8 Bytes
+
+so the solution is define well known serializing way, by serialize byte by byte
+meaning, we will get for integer only 4 bytes like this
+
+void * data = getDataFromSystemA();
+void * id_ptr = NULL;
+memcpy(id_ptr, data, 4) // 4 should be hardcoded, we agreed that each system will 
+de-serialize each data type based on his architecture which will cause to us some problems 
+with portability

@@ -1,0 +1,10 @@
+the purpose of this project, simulate adding private members as OOP languages (c++, java, ..)
+
+for attributes:
+the way we can achieve this by declare the struct in the .h file
+and in the .c add the real implementation
+
+
+for functions:
+the way we can achieve this by adding the function directly into .c file
+instead of define the prototype on .h file

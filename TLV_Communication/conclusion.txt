@@ -1,0 +1,5 @@
+TLV Communication:
+Type Length value
+
+discussing how we can achieve portability for the algorithm
+in different architectures (32, 64) bit
